@@ -1,0 +1,38 @@
+@media (max-width: 768px) {
+    .description-list-item {
+      line-height: 8px;
+    }
+}
+
+a {
+    text-decoration: underline;
+    color: inherit;
+}
+
+.position {
+    font-style: italic;
+    font-weight: 100;
+}
+
+h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+}
+
+.div-container {
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+ul {
+    padding-left: 16px;
+}
+
+.description-list-item {
+    line-height: 24px;
+    word-break: break-all;
+}
+
+.description-list-item h5 {
+    font-weight: 50;
+}

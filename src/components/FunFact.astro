@@ -1,0 +1,52 @@
+<div class="div-container">
+  <div class="fact">
+    <div class="fact-container">
+      <div class="fun-fact">&nbsp;Fun fact 💡</div>
+      <div>
+        What do you think <span class="code-block"
+          >&nbsp;&nbsp;(0.1 + 0.2) === 0.3&nbsp;&nbsp;</span
+        >&nbsp;would be in Javascript?
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  @media (max-width: 768px) {
+    .div-container {
+      display: none !important;
+    }
+  }
+
+  .fact {
+    border: grey solid 1px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 8px 32px;
+  }
+
+  .div-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fact-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 8px;
+  }
+
+  .fun-fact {
+    display: "flex";
+    background-color: rgb(87, 87, 200);
+    color: white;
+  }
+
+  .code-block {
+    background-color: grey;
+    font-family: monospace;
+    color: white;
+  }
+</style>

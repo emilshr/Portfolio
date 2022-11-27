@@ -1,0 +1,43 @@
+@media (max-width: 768px) {
+    .work-experience-container {
+        padding: 0px 8px;
+    }
+}
+
+@media (min-width: 768px) {
+    .work-experience-container {
+        align-items: center;
+        width: 650px;
+    }
+}
+
+.work-experience-container {
+    display: flex;
+    flex-grow: 1;
+}
+
+.selected-year  {
+    border: grey solid 2px;
+    border-radius: 5px;
+}
+
+.year {
+    padding: 16px;
+    cursor: pointer;
+}
+
+.years-container {
+    line-height: 16px;
+}
+
+.experience-container {
+    border: grey solid 2px;
+    height: 100%;
+    width: 100%;
+    margin-left: 8px;
+    border-radius: 5px;
+}
+
+.experience-content {
+    padding: 8px;
+}

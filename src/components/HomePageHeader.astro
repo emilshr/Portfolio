@@ -1,0 +1,62 @@
+---
+import "./components.css";
+import KeepScrolling from "./KeepScrolling.astro";
+---
+
+<div class:list={["box-container", "div-container"]}>
+  <div class:list={["box-container", "header-text"]}>
+    <h1>Emil Sharier</h1>
+    <h3>
+      I didn't really have a <span class="design-word">design</span> in mind
+    </h3>
+    <h3>So I ended up creating a blank webpage</h3>
+  </div>
+  <div class="keep-scrolling">
+    <KeepScrolling href="#bio" />
+  </div>
+</div>
+
+<style>
+  @media (max-width: 768px) {
+    .header-text {
+      padding: 0px 32px;
+    }
+  }
+
+  .keep-scrolling {
+    padding-bottom: 16px;
+  }
+
+  .design-word {
+    background: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .div-container {
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    scroll-snap-align: start;
+  }
+
+  .header-text {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 16px;
+  }
+
+  h3 {
+    text-align: center;
+    margin: 0;
+  }
+</style>

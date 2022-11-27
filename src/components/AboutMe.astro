@@ -1,0 +1,86 @@
+---
+import "./components.css";
+import JavascriptLogo from "../assets/javascript.png";
+---
+
+<div class:list={["box-container"]}>
+  <div class:list={["box-container", "about-me-container"]}>
+    <h1 class="about-me-header">About me</h1>
+    <p class="about-me-section">
+      I am a software engineer from Kerala, India. I'm curious about how things
+      are built on the web. This curiosity has led me on the path of becoming a
+      <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">
+        <span class="javascript-word"> Javascript</span>
+        <span><img height="14px" width="14px" src={JavascriptLogo} /></span>
+      </a>
+      developer and I am contemplating my existence in this universe right now.
+    </p>
+    <p class="about-me-section">
+      PS: Just kidding! I love the challenges that this language keeps giving me
+      😛
+    </p>
+  </div>
+</div>
+
+<style>
+  .javascript-word {
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: 500ms;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: inherit;
+  }
+
+  .javascript-word:hover {
+    text-decoration-color: #ffffff;
+  }
+
+  img {
+    cursor: pointer;
+  }
+
+  .div-container {
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: flex-start;
+    scroll-snap-align: start;
+  }
+
+  .about-me-container {
+    flex-direction: column;
+    padding: 16px 0px;
+    width: 100%;
+  }
+
+  .about-me-section h4 {
+    align-self: flex-start;
+  }
+
+  h4 {
+    margin: 0;
+  }
+
+  .about-me-header {
+    align-self: center;
+  }
+
+  .about-me-section {
+    padding: 0px 160px;
+    line-height: 24px;
+    text-align: justify;
+  }
+
+  @media (max-width: 768px) {
+    .about-me-section {
+      padding: 0px 8px;
+    }
+  }
+</style>

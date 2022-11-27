@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../components/components.css";
+import NavBar from "../components/NavBar.astro";
+import HomePageHeader from "../components/HomePageHeader.astro";
+import Bio from "../components/Bio.astro";
+---
+
+<Layout title="emil.sh">
+  <main>
+    <div id="nav-bar">
+      <NavBar />
+    </div>
+    <div id="home-page-header">
+      <HomePageHeader />
+    </div>
+    <div id="bio">
+      <Bio />
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    min-height: fit-content;
+    width: 100%;
+    scroll-snap-type: y mandatory;
+  }
+</style>

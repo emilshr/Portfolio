@@ -1,0 +1,85 @@
+---
+import "./components.css";
+import { WorkExperience } from "./WorkExperience";
+---
+
+<div class:list={["box-container", "container"]}>
+  <div class:list={["box-container", "my-journey-container"]}>
+    <h1 class="my-journey-header">My journey so far</h1>
+    <WorkExperience client:load />
+  </div>
+</div>
+
+<style>
+  .javascript-word {
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: 500ms;
+  }
+
+  .javascript-word:hover {
+    text-decoration-color: #ffffff;
+  }
+
+  img {
+    cursor: pointer;
+  }
+
+  .container {
+    flex-grow: 1;
+    align-items: center;
+    width: 100%;
+  }
+
+  .div-container {
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: flex-start;
+    background-image: linear-gradient(to bottom, #434343 0%, black 100%);
+    scroll-snap-align: start;
+  }
+
+  .my-journey-container {
+    flex-direction: column;
+    padding: 0px 0px 16px 0px;
+    width: 100%;
+    height: fit-content;
+  }
+
+  .my-journey-section h4 {
+    align-self: flex-start;
+  }
+
+  h4 {
+    margin: 0;
+  }
+
+  .my-journey-header {
+    align-self: center;
+  }
+
+  .my-journey-section {
+    padding: 0px 160px;
+    line-height: 24px;
+    text-align: justify;
+  }
+
+  @media (max-width: 768px) {
+    .my-journey-section {
+      padding: 0px 8px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .my-journey-container {
+      align-items: center;
+      flex-grow: 1;
+    }
+  }
+</style>

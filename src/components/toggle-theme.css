@@ -1,0 +1,20 @@
+button {
+    cursor: pointer;
+    padding: 0px 12px;
+}
+
+.button-dark {
+    background-color: transparent;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: large;
+}
+
+.button-light {
+    background-color: transparent;
+    border-radius: 5px;
+    border: none;
+    color: black;
+    font-size: large;
+}

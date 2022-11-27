@@ -1,0 +1,44 @@
+---
+import "./components.css";
+import { ToggleTheme } from "./ToggleTheme";
+---
+
+<nav role="navigation" id="navigation-bar">
+  <div class="navigation-item">
+    <a href="#"> emil.sh</a>
+  </div>
+  <div class:list={["navigation-item", "navigation-icon"]}>
+    <ToggleTheme client:load />
+  </div>
+</nav>
+
+<style>
+  @media (max-width: 768px) {
+    /* Add responsive selectors here */
+    .navigation-item {
+      padding: 4px;
+    }
+  }
+
+  nav {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    justify-content: space-between;
+    background: transparent;
+  }
+
+  .navigation-item {
+    padding: 8px;
+  }
+
+  .navigation-item a {
+    padding: 8px;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .navigation-icon {
+    cursor: pointer;
+  }
+</style>

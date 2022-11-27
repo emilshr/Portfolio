@@ -1,0 +1,39 @@
+---
+import "./components.css";
+import AboutMe from "./AboutMe.astro";
+import MyJourney from "./MyJourney.astro";
+import KeepScrolling from "./KeepScrolling.astro";
+import Socials from "./Socials.astro";
+import FunFact from "./FunFact.astro";
+---
+
+<div class:list={["div-container", "box-container"]}>
+  <div class:list={["bio-container", "box-container"]}>
+    <AboutMe />
+    <FunFact />
+    <MyJourney />
+  </div>
+  <div class="keep-scrolling">
+    <Socials />
+  </div>
+</div>
+
+<style>
+  .div-container {
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: flex-start;
+    scroll-snap-align: start;
+  }
+
+  .bio-container {
+    flex-grow: 1;
+    flex-direction: column;
+    padding-bottom: 32px;
+  }
+
+  .keep-scrolling {
+    padding-bottom: 16px;
+  }
+</style>

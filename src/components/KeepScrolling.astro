@@ -1,0 +1,49 @@
+---
+interface Props {
+  href?: string;
+}
+
+const { href = "#" } = Astro.props;
+---
+
+<div class:list={["scroll-text"]}>
+  <a href={href}>
+    <h4>Keep scrolling<span class="point-down-emoji"> 👇🏽</span></h4>
+  </a>
+</div>
+
+<style>
+  .point-down-emoji {
+    animation-name: finger-pointing-down;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    display: inline-block;
+  }
+
+  @keyframes finger-pointing-down {
+    from {
+      transform: translateY(-4px);
+    }
+
+    to {
+      transform: translateY(2px);
+    }
+  }
+
+  .scroll-text {
+    margin-top: auto;
+    opacity: 0.35;
+    text-decoration: none;
+  }
+
+  h4 {
+    text-decoration: inherit;
+    color: inherit;
+  }
+
+  a {
+    text-decoration: inherit !important;
+    color: inherit;
+  }
+</style>
